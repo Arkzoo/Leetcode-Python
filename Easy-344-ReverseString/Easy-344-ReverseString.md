@@ -1,29 +1,20 @@
-## Welcome to MarkdownPad 2 ##
+##ReverseString##
+Leetcode链接：[ReverseString](https://leetcode.com/problems/reverse-string/)
+##我自己的方法###
+<pre><code>class Solution(object):
+	def reverseString(self, s):
+		"""
+		:type s: str
+		:rtype: str
+		"""
+		rs = ""
+		for i in range(1,len(s)):
+			rs = rs + s[-i]
+		return rs </code></pre>
+sub后结果是TLE。我自己用IDE测试没有问题（没有测时间）。不明白Leetcode的时间要求。**没弄明白**
+##其他人的方法##
+###Extended Slicing
+>In  Python  2.3  and  later,  slice  expressions  have  support  for  an  optional  third  index,  used as  a  step  (sometimes  called  a  stride).  The  step  is  added  to  the  index  of  each  item  extracted.  The  full-blown  form  of  a  slice  is  now  X[I:J:K],  which  means  “extract  all  the items  in  X,  from  offset  I  through  J−1,  by  K.”  The  third  limit,  K,  defaults  to  +1,  which  is why normally all  items  in  a  slice  are  extracted  from  left  to  right.  If  you  specify  an  explicit value, however, you can use the third limit to skip items or to reverse their order. 
 
-**MarkdownPad** is a full-featured Markdown editor for Windows.
-
-### Built exclusively for Markdown ###
-
-Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.
-
-Give them a try:
-
-- **Bold** (`Ctrl+B`) and *Italic* (`Ctrl+I`)
-- Quotes (`Ctrl+Q`)
-- Code blocks (`Ctrl+K`)
-- Headings 1, 2, 3 (`Ctrl+1`, `Ctrl+2`, `Ctrl+3`)
-- Lists (`Ctrl+U` and `Ctrl+Shift+O`)
-
-### See your changes instantly with LivePreview ###
-
-Don't guess if your [hyperlink syntax](http://markdownpad.com) is correct; LivePreview will show you exactly what your document looks like every time you press a key.
-
-### Make it your own ###
-
-Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.
-
-### A robust editor for advanced Markdown users ###
-
-MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.
-
-With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there's no limit to what you can do with MarkdownPad.
+     
+		
